@@ -1,0 +1,70 @@
+class PersonelsController < ApplicationController
+  before_action :set_personel, only: %i[ show edit update destroy ]
+
+  # GET /personels or /personels.json
+  def index
+    @personels = Personel.all
+  end
+
+  # GET /personels/1 or /personels/1.json
+  def show
+  end
+
+  # GET /personels/new
+  def new
+    @personel = Personel.new
+  end
+
+  # GET /personels/1/edit
+  def edit
+  end
+
+  # POST /personels or /personels.json
+  def create
+    @personel = Personel.new(personel_params)
+
+    respond_to do |format|
+      if @personel.save
+        format.html { redirect_to personel_url(@personel), notice: "Personel was successfully created." }
+        format.json { render :show, status: :created, location: @personel }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @personel.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH/PUT /personels/1 or /personels/1.json
+  def update
+    respond_to do |format|
+      if @personel.update(personel_params)
+        format.html { redirect_to personel_url(@personel), notice: "Personel was successfully updated." }
+        format.json { render :show, status: :ok, location: @personel }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @personel.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # DELETE /personels/1 or /personels/1.json
+  def destroy
+    @personel.destroy!
+
+    respond_to do |format|
+      format.html { redirect_to personels_url, notice: "Personel was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_personel
+      @personel = Personel.find(params[:id])
+    end
+
+    # Only allow a list of trusted parameters through.
+    def personel_params
+      params.require(:personel).permit(:name, :first_name, :last_name, :date_of_birth, :phone, :role)
+    end
+end

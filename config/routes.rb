@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :students
+  resources :accountants
+  resources :administrators
+  resources :discipline_directors
+  resources :parents
+  resources :study_directors
+  resources :teachers
+  resources :personels
+  resources :years
   resources :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Discipline directors</h1>
+
+<div id="discipline_directors">
+  <% @discipline_directors.each do |discipline_director| %>
+    <%= render discipline_director %>
+    <p>
+      <%= link_to "Show this discipline director", discipline_director %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New discipline director", new_discipline_director_path %>
