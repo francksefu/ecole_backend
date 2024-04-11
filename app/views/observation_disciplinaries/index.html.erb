@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Observation disciplinaries</h1>
+
+<div id="observation_disciplinaries">
+  <% @observation_disciplinaries.each do |observation_disciplinary| %>
+    <%= render observation_disciplinary %>
+    <p>
+      <%= link_to "Show this observation disciplinary", observation_disciplinary %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New observation disciplinary", new_observation_disciplinary_path %>

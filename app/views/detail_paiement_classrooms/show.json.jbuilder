@@ -1,0 +1,1 @@
+json.partial! "detail_paiement_classrooms/detail_paiement_classroom", detail_paiement_classroom: @detail_paiement_classroom

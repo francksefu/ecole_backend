@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Periodes</h1>
+
+<div id="periodes">
+  <% @periodes.each do |periode| %>
+    <%= render periode %>
+    <p>
+      <%= link_to "Show this periode", periode %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New periode", new_periode_path %>

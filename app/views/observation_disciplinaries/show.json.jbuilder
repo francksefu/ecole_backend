@@ -1,0 +1,1 @@
+json.partial! "observation_disciplinaries/observation_disciplinary", observation_disciplinary: @observation_disciplinary

@@ -1,0 +1,57 @@
+<%= form_with(model: schedule) do |form| %>
+  <% if schedule.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(schedule.errors.count, "error") %> prohibited this schedule from being saved:</h2>
+
+      <ul>
+        <% schedule.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :date, style: "display: block" %>
+    <%= form.date_field :date %>
+  </div>
+
+  <div>
+    <%= form.label :first_H, style: "display: block" %>
+    <%= form.number_field :first_H %>
+  </div>
+
+  <div>
+    <%= form.label :second_H, style: "display: block" %>
+    <%= form.number_field :second_H %>
+  </div>
+
+  <div>
+    <%= form.label :third_H, style: "display: block" %>
+    <%= form.number_field :third_H %>
+  </div>
+
+  <div>
+    <%= form.label :fourth_H, style: "display: block" %>
+    <%= form.number_field :fourth_H %>
+  </div>
+
+  <div>
+    <%= form.label :fifth_H, style: "display: block" %>
+    <%= form.number_field :fifth_H %>
+  </div>
+
+  <div>
+    <%= form.label :sixth_H, style: "display: block" %>
+    <%= form.number_field :sixth_H %>
+  </div>
+
+  <div>
+    <%= form.label :seven_H, style: "display: block" %>
+    <%= form.number_field :seven_H %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

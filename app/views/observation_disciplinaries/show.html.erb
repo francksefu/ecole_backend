@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @observation_disciplinary %>
+
+<div>
+  <%= link_to "Edit this observation disciplinary", edit_observation_disciplinary_path(@observation_disciplinary) %> |
+  <%= link_to "Back to observation disciplinaries", observation_disciplinaries_path %>
+
+  <%= button_to "Destroy this observation disciplinary", @observation_disciplinary, method: :delete %>
+</div>

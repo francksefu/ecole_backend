@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  resources :observation_disciplinaries
+  resources :paiements
+  resources :detail_paiement_classrooms
+  resources :detail_paiements
+  resources :periodes
+  resources :promotions
+  resources :schedules
   resources :courses
   resources :classrooms
   resources :sections

@@ -1,0 +1,27 @@
+<%= form_with(model: observation_disciplinary) do |form| %>
+  <% if observation_disciplinary.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(observation_disciplinary.errors.count, "error") %> prohibited this observation_disciplinary from being saved:</h2>
+
+      <ul>
+        <% observation_disciplinary.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :data, style: "display: block" %>
+    <%= form.date_field :data %>
+  </div>
+
+  <div>
+    <%= form.label :observation, style: "display: block" %>
+    <%= form.text_area :observation %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

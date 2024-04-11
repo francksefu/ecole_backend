@@ -1,0 +1,2 @@
+class ObservationDisciplinary < ApplicationRecord
+end

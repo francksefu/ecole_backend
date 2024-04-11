@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @periode %>
+
+<div>
+  <%= link_to "Edit this periode", edit_periode_path(@periode) %> |
+  <%= link_to "Back to periodes", periodes_path %>
+
+  <%= button_to "Destroy this periode", @periode, method: :delete %>
+</div>

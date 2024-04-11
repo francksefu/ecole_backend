@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @detail_paiement %>
+
+<div>
+  <%= link_to "Edit this detail paiement", edit_detail_paiement_path(@detail_paiement) %> |
+  <%= link_to "Back to detail paiements", detail_paiements_path %>
+
+  <%= button_to "Destroy this detail paiement", @detail_paiement, method: :delete %>
+</div>
