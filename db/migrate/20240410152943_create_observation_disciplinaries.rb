@@ -3,6 +3,8 @@ class CreateObservationDisciplinaries < ActiveRecord::Migration[7.1]
     create_table :observation_disciplinaries do |t|
       t.date :data
       t.text :observation
+      t.references :discipline_director, foreign_key: true
+      t.references :promotion, foreign_key: true
 
       t.timestamps
     end

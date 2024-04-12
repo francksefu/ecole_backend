@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2024-04-12
+  maximum: 1.5
+  classroom_course: one
+  periode: one
+  is_remote: false
+
+two:
+  date: 2024-04-12
+  maximum: 1.5
+  classroom_course: two
+  periode: two
+  is_remote: false

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @date_evaluation %>
+
+<div>
+  <%= link_to "Edit this date evaluation", edit_date_evaluation_path(@date_evaluation) %> |
+  <%= link_to "Back to date evaluations", date_evaluations_path %>
+
+  <%= button_to "Destroy this date evaluation", @date_evaluation, method: :delete %>
+</div>
